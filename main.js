@@ -67,7 +67,11 @@ controlElevation.load("data/etappe9.gpx");
 //Pulldown für Navigation
 let pulldown = document.querySelector("#pulldown");
 for (let etappe of ETAPPEN){
-    pulldown.innerHTML += `<option value="${etappe.user}">Etappe: ${etappe.nr}: ${etappe.etappe}</option>`
+    let status ="";
+    if(etappe.nr =="9"){
+        status = "selected";
+    }
+    pulldown.innerHTML += `<option ${status} value="${etappe.user}">Etappe: ${etappe.nr}: ${etappe.etappe}</option>`
 }
 
 //let profileDiv = document.querySelector("#profile")
