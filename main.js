@@ -57,3 +57,9 @@ let layerControl = L.control.layers({
 L.control.scale({
     imperial: false,
 }).addTo(map);
+
+//GPX Track visualisieren 
+let controlElevation = L.control.elevation({time: false, elevationDiv: "#profile", height: 300,theme:"bike-tirol"}
+
+).addTo(map);
+controlElevation.load("data/etappe9.gpx")
