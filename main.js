@@ -62,4 +62,13 @@ L.control.scale({
 let controlElevation = L.control.elevation({time: false, elevationDiv: "#profile", height: 300,theme:"bike-tirol"}
 
 ).addTo(map);
-controlElevation.load("data/etappe9.gpx")
+controlElevation.load("data/etappe9.gpx");
+
+//Pulldown für Navigation
+let pulldown = document.querySelector("#pulldown");
+for (let etappe of ETAPPEN){
+    pulldown.innerHTML += `<option value="${etappe.user}">Etappe: ${etappe.nr}: ${etappe.etappe}</option>`
+}
+
+//let profileDiv = document.querySelector("#profile")
+//profileDiv.innerHTML="Sepp"
