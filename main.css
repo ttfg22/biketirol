@@ -49,6 +49,10 @@ article {
    margin: top 0.3em;
 }
 
+#pulldown{
+    margin-bottom:0.3em;
+}
+
 .bike-tirol{
     --ele-area:#DDDDDD;
     --ele-bg:"white";
